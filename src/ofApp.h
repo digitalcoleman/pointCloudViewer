@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxGui.h"
+#include "ofxDOF.h"
 
 class ofApp : public ofBaseApp{
 
@@ -21,6 +22,7 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+        void loadPoints(string fileName);
     
     ofEasyCam cam;
     ofMesh mesh;
@@ -29,6 +31,11 @@ class ofApp : public ofBaseApp{
     ofxPanel gui;
     ofxFloatSlider scaler;
     ofxFloatSlider pointSize;
+    ofxFloatSlider focusDist;
+    ofxFloatSlider focalLength;
+    ofxFloatSlider blur;
     ofxToggle meshOn;
+    
+	ofxDOF depthOfField;
 		
 };
